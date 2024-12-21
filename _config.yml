@@ -23,3 +23,5 @@ header_pages:
   - about.markdown
   - index.markdown
   - blog.markdown
+
+  show_rss_feed: false
