@@ -1,37 +1,191 @@
---- --- @import "minima";
+@import "minima";
 /* Minima のデフォルトスタイルをインポート */
 
-/* 背景色を微調整 */
+/* === 全体設定 === */
+
+/* 背景色の調整 */
 body {
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
+    /* より落ち着いたライトグレーに変更 */
+    font-family: "Arial", sans-serif;
+    /* 全体的に統一感のあるフォント */
 }
 
-/* ナビゲーションバーのスタイル */
+/* ナビゲーションバー */
 .navbar {
-    background-color: #333;
-    color: white;
+    background-color: #222;
+    /* より深い黒に近い色 */
+    color: #fff;
+    /* コントラストの高い白 */
 }
 
 .navbar a {
-    color: white;
+    color: #d2ccc8;
+    /* 柔らかい色合いのリンク */
     text-decoration: none;
 }
 
 .navbar a:hover {
     color: #ccc;
+    /* ホバー時に少し明るく */
 }
 
-/* 見出しの調整 */
+/* === レイアウト設定 === */
+
+/* コンテンツ全体の幅と中央寄せ */
+.page-content .wrapper,
+.home {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+/* 文末と左右の揃えを調整 */
+.post-content,
+.post-list li,
+.home {
+    text-align: justify;
+    /* 文末を揃える */
+}
+
+/* === 見出しとテキスト === */
+
 h1,
 h2,
 h3 {
     font-family: "Arial", sans-serif;
+    color: #333;
+    /* 濃いグレー */
+    margin-bottom: 20px;
 }
 
-@import "minima";
+.page-heading {
+    font-size: 2rem;
+    text-align: center;
+    /* 見出しを中央揃え */
+}
 
-/* Minima のデフォルトスタイルをインポート */
-/* RSS フィードリンクを非表示にする */
-.post-feed-header .rss-subscribe {
-    display: none;
+/* === ホームページ専用のスタイル === */
+
+.home {
+    margin-top: 30px;
+}
+
+.post-list li {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    /* 各投稿を分ける線を追加 */
+}
+
+/* === About ページ専用の調整 === */
+
+.post {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: justify;
+    /* 文末を揃える */
+}
+
+/* ギャラリー全体の設定 */
+.works-gallery {
+    display: flex;
+    /* Flexbox を使用 */
+    flex-wrap: wrap;
+    /* コンテンツがあふれる場合に折り返す */
+    gap: 20px;
+    /* サムネイル間のスペース */
+    justify-content: center;
+    /* 中央揃え */
+    margin-top: 30px;
+    padding: 0;
+}
+
+/* 各作品アイテムの設定 */
+.work-item {
+    flex: 1 1 calc(33.333% - 20px);
+    /* 横3列に対応 */
+    max-width: calc(33.333% - 20px);
+    /* 最大幅も指定 */
+    box-sizing: border-box;
+    /* パディングを幅に含める */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* サムネイル画像のスタイル */
+.work-item img {
+    width: 100%;
+    /* 横幅いっぱいに表示 */
+    aspect-ratio: 4 / 3;
+    /* サムネイルを4:3の比率に固定 */
+    object-fit: cover;
+    /* 画像を引き伸ばさず切り取り */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* サムネイルの影 */
+    transition: transform 0.3s ease;
+    /* ホバー時の拡大エフェクト */
+}
+
+/* ホバー時のエフェクト */
+.work-item:hover img {
+    transform: scale(1.05);
+    /* ホバーで少し拡大 */
+}
+
+/* タイトルと説明文のスタイル */
+.work-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.work-item p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .work-item {
+        flex: 1 1 calc(50% - 20px);
+        /* 横2列 */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .work-item {
+        flex: 1 1 100%;
+        /* 横1列 */
+        max-width: 100%;
+    }
+}
+
+/* === ブログリスト === */
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.blog-list li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    /* 視覚的に区切る線を追加 */
+    padding-bottom: 10px;
+}
+
+.blog-list li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.blog-list li a:hover {
+    color: #555;
+    /* ホバー時に少し濃い色 */
 }
