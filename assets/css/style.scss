@@ -30,6 +30,8 @@ h3 {
 
 @import "minima";
 
-.post feed-header .rss-subscribe {
+/* Minima のデフォルトスタイルをインポート */
+/* RSS フィードリンクを非表示にする */
+.post-feed-header .rss-subscribe {
     display: none;
 }
