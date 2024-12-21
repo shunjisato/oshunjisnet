@@ -1,0 +1,29 @@
+--- --- @import "minima";
+/* Minima のデフォルトスタイルをインポート */
+
+/* 背景色を微調整 */
+body {
+    background-color: #f9f9f9;
+}
+
+/* ナビゲーションバーのスタイル */
+.navbar {
+    background-color: #333;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #ccc;
+}
+
+/* 見出しの調整 */
+h1,
+h2,
+h3 {
+    font-family: "Arial", sans-serif;
+}
