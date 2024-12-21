@@ -25,7 +25,9 @@ I am based in Japan, where I work on media art, especially sound art.  As a free
 ## Participated Projects
 
 2017 "Bar Intelligence" 自然知能研究グループ
+
 2017 “The Magic Touch” Xperia Touch
+
 2017 "ビューティフル・ライス～1000年おいしく食べられますように" 日本科学未来館
 2018 "THE FLOW OF TIME" Grand Seiko
 2018 "Hidden Senses" SONY
